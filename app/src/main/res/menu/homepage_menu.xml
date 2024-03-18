@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:title="item1"
-        android:id="@+id/home_nav_menu"/>
-    <item
-        android:title="item2"
-        android:id="@+id/profile_nav_menu"/>
-</menu>
