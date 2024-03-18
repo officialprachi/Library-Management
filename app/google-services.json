@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "941482706249",
+    "project_id": "library-management-syste-6791e",
+    "storage_bucket": "library-management-syste-6791e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:941482706249:android:0612aca189864535dc8698",
+        "android_client_info": {
+          "package_name": "com.example.librarymanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "941482706249-enh6atq3fasd1ffr43qli73depejppjh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.librarymanagementsystem",
+            "certificate_hash": "103d541d72f4259e7a6cb81afb9410fdab1423bb"
+          }
+        },
+        {
+          "client_id": "941482706249-ubdoelsagf426a9b08rf6pr2sek37l28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTixeO4EaiGRNAjewkmYLCq0Qw7hHQokU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "941482706249-ubdoelsagf426a9b08rf6pr2sek37l28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

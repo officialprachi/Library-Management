@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Library Management System</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login_with_google">Login with Google</string>
+    <string name="enter_new_password">Enter new password</string>
 </resources>
