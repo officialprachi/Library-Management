@@ -1,6 +1,5 @@
 package com.example.librarymanagementsystem
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.ImageButton
@@ -8,8 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.librarymanagementsystem.booksAdapter
-import com.example.librarymanagementsystem.R
+
 class HomepageActivity : AppCompatActivity() {
         private var recyclerView: RecyclerView? = null
         private var adapter: booksAdapter? = null

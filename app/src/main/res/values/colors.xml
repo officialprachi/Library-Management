@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="librarymanagement">#EADEA1</color>
     <color name="grey">#474545</color>
+    <color name="background_dark">#121213</color>
 </resources>
