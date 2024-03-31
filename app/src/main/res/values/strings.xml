@@ -3,4 +3,7 @@
     <string name="item_1">Item 1</string>
     <string name="item_2">Item 2</string>
     <string name="save_button_description">save_button_description</string>
+    <string name="navigation_drawer_open">Open drawer</string>
+    <string name="navigation_drawer_close">Close drawer</string>
+
 </resources>
