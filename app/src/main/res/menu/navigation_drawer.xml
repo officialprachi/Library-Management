@@ -8,15 +8,15 @@ android:id="@+id/main_item"
 <menu>
     <item
         android:id="@+id/inbox_item"
-        android:title="inbox_title"
+        android:title="Add New Books"
         android:checkable="true"/>
     <item
         android:id="@+id/outbox_item"
-        android:title="outbox_title"
+        android:title=" Add New Student "
         android:checkable="true"/>
     <item
         android:id="@+id/favourites_item"
-        android:title="favourites_title"
+        android:title="Student Details"
         android:checkable="true"/>
 
 </menu>
@@ -24,13 +24,9 @@ android:id="@+id/main_item"
 
     <item
                 android:id="@+id/search_item"
-                android:title="Add Student Record"
+                android:title="LogOut"
                 android:checkable="true"
                 app:showAsAction="ifRoom"/>
-            <item
-                android:id="@+id/rotation_item"
-                android:title="Add Books"
-                android:checkable="true"
-                app:showAsAction="ifRoom"/>
+
 
         </menu>
