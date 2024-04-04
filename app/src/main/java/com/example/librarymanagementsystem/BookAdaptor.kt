@@ -32,7 +32,7 @@ class BookAdapter(private val booksData: List<bookscardview>) : RecyclerView.Ada
             holder.bookImage.setImageResource(book.imageResourceId)
         } else {
             // Set a placeholder image (optional):
-            holder.bookImage.setImageResource(R.drawable.book2)
+
         }
     }
 
