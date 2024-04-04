@@ -1,8 +1,4 @@
-package com.example.librarymanagementsystem
-
-import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -10,25 +6,24 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.librarymanagementsystem.booksAdapter
 import com.example.librarymanagementsystem.R
+
 class HomepageActivity : AppCompatActivity() {
-        private var recyclerView: RecyclerView? = null
-        private var adapter: booksAdapter? = null
+        private lateinit var recyclerView: RecyclerView
+        private lateinit var adapter: booksAdapter
 
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_homepage)
+
                 recyclerView = findViewById(R.id.recycler_view)
-                recyclerView?.layoutManager = LinearLayoutManager(this)
+                recyclerView.layoutManager = LinearLayoutManager(this)
+
                 val data = generateData() // Your data source
                 adapter = booksAdapter(data)
-                recyclerView?.adapter = adapter
+                recyclerView.adapter = adapter
 
-                // Inflate the layout containing the save button
-                val inflater = LayoutInflater.from(this)
-                val rootView = inflater.inflate(R.layout.bookslayout, null, false)
-
-// Find the save button within the root view of the other layout
-                val saveButton = rootView.findViewById<ImageButton>(R.id.save_Btn)
+                // Find the save button within the activity_homepage layout
+                val saveButton = findViewById<ImageButton>(R.id.save_Btn)
                 saveButton.setOnClickListener { onSaveButtonClick() }
         }
 
@@ -41,9 +36,7 @@ class HomepageActivity : AppCompatActivity() {
                 return data
         }
 
-        fun onSaveButtonClick() {
+        private fun onSaveButtonClick() {
                 Toast.makeText(this, "Image saved!", Toast.LENGTH_SHORT).show()
         }
 }
-
-
