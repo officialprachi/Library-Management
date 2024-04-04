@@ -29,6 +29,10 @@ class BooksAdaptor(private val imageResourceIds: MutableList<bookscardview>) : R
     }
 }
 
+private fun ImageView.setImageResource(imageResourceId: bookscardview) {
+
+}
+
 private fun ImageView.setImageResource(imageResourceId: String) {
 
 }

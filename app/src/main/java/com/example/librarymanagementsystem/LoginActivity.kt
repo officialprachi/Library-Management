@@ -27,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         btn_login=findViewById(R.id.btn_login)
         signup=findViewById(R.id.signup)
         username=findViewById(R.id.username)
-        this.pwd =findViewById(R.id.pwd)
+        pwd =findViewById(R.id.pwd)
 
                 // Your login button click listener
                 btn_login.setOnClickListener {
@@ -48,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Login success, navigate to HomepageActivity
-                            startActivity(Intent(this, HomePageActivity::class.java))
+                            startActivity(Intent(this, Homepage::class.java))
                             finish()
                         } else {
                             // Login failed, show an error message or handle accordingly
