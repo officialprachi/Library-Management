@@ -79,10 +79,18 @@ class Homepage : AppCompatActivity() {
         if (!data.contains(bookscardview("Solar Bones", R.drawable.book2))) {
             data.add(bookscardview("Solar Bones", R.drawable.book2))
         }
-        if (!data.contains(bookscardview("Atomic Habits", R.drawable.book3))) {
-            data.add(bookscardview("Atomic Habits", R.drawable.book3))
+        if (!data.contains(bookscardview("Arduino Programming", R.drawable.book3))) {
+            data.add(bookscardview("Arduino Programming", R.drawable.book3))
         }
-
+        if (!data.contains(bookscardview("Data Structure", R.drawable.book4))) {
+            data.add(bookscardview("Data Structure", R.drawable.book4))
+        }
+        if (!data.contains(bookscardview("Python", R.drawable.book5))) {
+            data.add(bookscardview("Python", R.drawable.book5))
+        }
+        if (!data.contains(bookscardview("C++ ", R.drawable.book6))) {
+            data.add(bookscardview("C++", R.drawable.book6))
+        }
         // Add more books as needed
         return data
     }

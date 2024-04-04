@@ -12,5 +12,7 @@
     <string name="librarymanagement" />
     <string name="sign_up">\n</string>
     <string name="don_t_have_an_account" />
+    <string name="issue">Issue</string>
+    <string name="data_structure">\'Data Structure\'</string>
 
 </resources>
