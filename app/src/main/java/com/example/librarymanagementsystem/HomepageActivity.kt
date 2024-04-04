@@ -4,12 +4,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.librarymanagementsystem.booksAdapter
+import com.example.librarymanagementsystem.BooksAdapter
 import com.example.librarymanagementsystem.R
 
 class HomepageActivity : AppCompatActivity() {
         private lateinit var recyclerView: RecyclerView
-        private lateinit var adapter: booksAdapter
+        private lateinit var adapter: BooksAdapter
 
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
@@ -19,7 +19,7 @@ class HomepageActivity : AppCompatActivity() {
                 recyclerView.layoutManager = LinearLayoutManager(this)
 
                 val data = generateData() // Your data source
-                adapter = booksAdapter(data)
+                adapter = BooksAdapter(data)
                 recyclerView.adapter = adapter
 
                 // Find the save button within the activity_homepage layout

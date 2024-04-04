@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem
 
+import HomepageActivity
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -28,11 +29,7 @@ class LoginActivity : AppCompatActivity() {
         signup=findViewById(R.id.signup)
         username=findViewById(R.id.username)
         pwd =findViewById(R.id.pwd)
-              /* if (auth.currentUser != null) {
-                    // User is already logged in, navigate to HomepageActivity
-                    startActivity(Intent(this, HomepageActivity::class.java))
-                    finish()
-               }*/
+
                 // Your login button click listener
                 btn_login.setOnClickListener {
                     val email = username.text.toString()
