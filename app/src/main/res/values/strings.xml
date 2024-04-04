@@ -5,5 +5,7 @@
     <string name="save_button_description">save_button_description</string>
     <string name="navigation_drawer_open">Open drawer</string>
     <string name="navigation_drawer_close">Close drawer</string>
+    <string name="search_your_books">Search your books</string>
+    <string name="our_books_collection">Our Books Collection!</string>
 
 </resources>

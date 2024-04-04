@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:background="#121213">
 
+    <!-- CardView for book1 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview1"
         android:layout_width="163dp"
@@ -14,41 +15,39 @@
         android:layout_marginTop="33dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ExtraText">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/book1"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:scaleType="centerCrop"
             android:src="@drawable/book1" />
-
     </androidx.cardview.widget.CardView>
 
+    <!-- TextView for book1 title -->
     <TextView
         android:id="@+id/book_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
         android:fontFamily="cursive"
         android:text="'My name is not devdas'"
         android:textColor="@color/librarymanagement"
         android:textSize="19dp"
+        android:layout_marginStart="30dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardview1" />
 
+    <!-- ImageButton for saving book1 -->
+
+    <!-- Button for issuing book1 -->
+
     <ImageButton
-        android:id="@+id/save_Btn"
+        android:id="@+id/save_Btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
         android:src="@drawable/savebtn"
@@ -56,18 +55,17 @@
         app:layout_constraintTop_toBottomOf="@+id/cardview1" />
 
     <Button
-        android:id="@+id/issue_btn"
+        android:id="@+id/issue_btn1"
         android:layout_width="83dp"
         android:layout_height="42dp"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="231dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
         android:textSize="13dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/cardview1"
+        app:layout_constraintTop_toBottomOf="@id/book_title1" />
 
+    <!-- CardView for book2 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview2"
         android:layout_width="163dp"
@@ -82,14 +80,11 @@
             android:id="@+id/book2"
             android:layout_width="match_parent"
             android:layout_height="171dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:scaleType="centerCrop"
             android:src="@drawable/book2" />
-
     </androidx.cardview.widget.CardView>
 
+    <!-- TextView for book2 title -->
     <TextView
         android:id="@+id/book_title2"
         android:layout_width="wrap_content"
@@ -100,44 +95,44 @@
         android:textColor="@color/librarymanagement"
         android:textSize="22dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardview1" />
+        app:layout_constraintTop_toBottomOf="@id/cardview1" />
 
+    <!-- ImageButton for saving book2 -->
+
+    <!-- Button for issuing book2 -->
     <ImageButton
         android:id="@+id/savebtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="232dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
         android:src="@drawable/savebtn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/issue_btn1"
+        app:layout_constraintTop_toBottomOf="@+id/book_title2" />
 
     <Button
-        android:id="@+id/issuebtn3"
+        android:id="@+id/issuebtn2"
         android:layout_width="83dp"
         android:layout_height="42dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="229dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
         android:textSize="13dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/cardview2"
+        app:layout_constraintTop_toBottomOf="@id/book_title2" />
 
+    <!-- CardView for book3 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview3"
         android:layout_width="142dp"
         android:layout_height="169dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="316dp"
+        android:layout_marginTop="75dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/cardview1">
 
         <ImageView
             android:id="@+id/book3"
@@ -149,43 +144,224 @@
 
     </androidx.cardview.widget.CardView>
 
+    <!-- TextView for book3 title -->
     <TextView
         android:id="@+id/book_title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="'Atomic Habits'"
-        android:textColor="@color/librarymanagement"
-        android:fontFamily="cursive"
-        android:textSize="20dp"
         android:layout_marginStart="40dp"
+        android:fontFamily="cursive"
+        android:text="'Data Structures'"
+        android:textColor="@color/librarymanagement"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardview3" />
+
+    <!-- ImageButton for saving book3 -->
+
+    <!-- Button for issuing book3 -->
+
     <ImageButton
-        android:id="@+id/savebtn1"
+        android:id="@+id/savebtn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
         android:src="@drawable/savebtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/book_title3" />
 
     <Button
-        android:id="@+id/issuebtn2"
+        android:id="@+id/issuebtn3"
         android:layout_width="83dp"
         android:layout_height="42dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="512dp"
+        android:layout_marginTop="8dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
         android:textSize="13dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/book_title3" />
+
+    <!-- CardView for book4 -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview4"
+        android:layout_width="142dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@+id/cardview3"
+        app:layout_constraintTop_toBottomOf="@+id/book_title2">
+
+        <ImageView
+            android:id="@+id/book4"
+            android:layout_width="138dp"
+            android:layout_height="171dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/book4" />
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/book_title4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="cursive"
+        android:text="'ArduinoProgramming'"
+        android:textColor="@color/librarymanagement"
+        android:textSize="19dp"
+        app:layout_constraintStart_toEndOf="@+id/book_title3"
+        app:layout_constraintTop_toBottomOf="@+id/cardview4" />
+
+    <ImageButton
+        android:id="@+id/savebtn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/save_button_description"
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toEndOf="@+id/issuebtn3"
+        app:layout_constraintTop_toBottomOf="@+id/book_title4" />
+
+    <!-- CardView for book5 -->
+    <!-- CardView for book5 -->
+
+    <Button
+        android:id="@+id/issuebtn4"
+        android:layout_width="83dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/librarymanagement"
+        android:text="Issue"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/savebtn4"
+        app:layout_constraintTop_toBottomOf="@+id/book_title4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview5"
+        android:layout_width="142dp"
+        android:layout_height="169dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/issuebtn3"
+        tools:layout_editor_absoluteX="30dp">
+
+        <ImageView
+            android:id="@+id/book5"
+            android:layout_width="138dp"
+            android:layout_height="171dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/book5" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView for book5 title -->
+    <TextView
+        android:id="@+id/book_title5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:fontFamily="cursive"
+        android:text="'PythonProgramming'"
+        android:textColor="@color/librarymanagement"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview5" />
+
+    <!-- ImageButton for saving book5 -->
+    <ImageButton
+        android:id="@+id/savebtn5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/save_button_description"
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/book_title5" />
+
+    <!-- Button for issuing book5 -->
+
+    <!-- CardView for book6 -->
+
+    <Button
+        android:id="@+id/issuebtn5"
+        android:layout_width="83dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/librarymanagement"
+        android:text="Issue"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/savebtn5"
+        app:layout_constraintTop_toBottomOf="@+id/book_title5" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardview6"
+        android:layout_width="142dp"
+        android:layout_height="169dp"
+        android:layout_marginStart="60dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintStart_toEndOf="@+id/cardview5"
+        app:layout_constraintTop_toTopOf="@+id/cardview5">
+
+        <ImageView
+            android:id="@+id/book6"
+            android:layout_width="149dp"
+            android:layout_height="165dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/book6" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- TextView for book6 title -->
+    <TextView
+        android:id="@+id/book_title6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="cursive"
+        android:text="'C++Programming'"
+        android:textColor="@color/librarymanagement"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/issuebtn5"
+        app:layout_constraintTop_toBottomOf="@+id/cardview6" />
+
+    <!-- ImageButton for saving book6 -->
+    <ImageButton
+        android:id="@+id/savebtn6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="@string/save_button_description"
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toEndOf="@+id/issuebtn5"
+        app:layout_constraintTop_toBottomOf="@+id/book_title6" />
+
+    <!-- Button for issuing book6 -->
+    <Button
+        android:id="@+id/issuebtn6"
+        android:layout_width="83dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="20dp"
+        android:backgroundTint="@color/librarymanagement"
+        android:text="Issue"
+        android:textColor="@color/black"
+        android:textSize="13dp"
+        app:layout_constraintStart_toEndOf="@+id/savebtn6"
+        app:layout_constraintTop_toBottomOf="@+id/book_title6" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
