@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class BooksAdapter(private val imageResourceIds: List<String>) : RecyclerView.Adapter<BooksAdapter.MyViewHolder>() {
+class BooksAdapter(private val imageResourceIds: MutableList<bookscardview>) : RecyclerView.Adapter<BooksAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bookImage: ImageView = itemView.findViewById(R.id.book1)
