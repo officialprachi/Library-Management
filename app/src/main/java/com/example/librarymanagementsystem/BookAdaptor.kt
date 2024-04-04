@@ -4,12 +4,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.cardview.widget.CardView
 
 import androidx.recyclerview.widget.RecyclerView
 
 
-class booksAdapter(private val booksData: List<String>) : RecyclerView.Adapter<booksAdapter.MyViewHolder>()  {
+class booksAdapter(private val booksData: List<bookscardview>) : RecyclerView.Adapter<booksAdapter.MyViewHolder>()  {
     inner  class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val cardView: CardView = itemView.findViewById(R.id.cardview1)
         val bookImage: ImageView = itemView.findViewById(R.id.book1)
@@ -22,7 +23,7 @@ class booksAdapter(private val booksData: List<String>) : RecyclerView.Adapter<b
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val item = booksData[position]
-       // holder.bookImage.setImageResource(item.imageResourceId)
+        holder.bookImage.setImageResource(item.imageResourceId)
     }
 
     override fun getItemCount(): Int {
