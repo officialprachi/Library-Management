@@ -3,12 +3,16 @@ package com.example.librarymanagementsystem
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
-
+import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class booksAdapter(private val booksData: List<String>) : RecyclerView.Adapter<booksAdapter.MyViewHolder>() {
+class BooksAdaptor(private val imageResourceIds: MutableList<bookscardview>) : RecyclerView.Adapter<BooksAdaptor.MyViewHolder>() {
+
+    inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val bookImage: ImageView = itemView.findViewById(R.id.book1)
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val view: View = LayoutInflater.from(parent.context)
             .inflate(R.layout.bookslayout, parent, false)
@@ -16,24 +20,15 @@ class booksAdapter(private val booksData: List<String>) : RecyclerView.Adapter<b
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        val item = booksData[position]
-        holder.bind(item)
+        val imageResourceId = imageResourceIds[position]
+        holder.bookImage.setImageResource(imageResourceId)
     }
 
     override fun getItemCount(): Int {
-        return booksData.size
-    }
-
-    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val cardView: CardView
-
-        init {
-            cardView = itemView.findViewById<CardView>(R.id.cardview1)
-        }
-
-        fun bind(item: String?) {
-            cardView.id
-        }
+        return imageResourceIds.size
     }
 }
 
+private fun ImageView.setImageResource(imageResourceId: String) {
+
+}

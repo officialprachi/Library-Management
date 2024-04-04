@@ -55,7 +55,7 @@
             <com.google.android.material.search.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="@string/search_your_books"
+                android:hint="Search your books"
                 app:layout_anchor="@id/search_bar">
                 <!-- Search suggestions/results go here (ScrollView, RecyclerView, etc.). -->
             </com.google.android.material.search.SearchView>
@@ -70,7 +70,7 @@
             android:layout_below="@+id/search"
             android:layout_marginStart="90dp"
             android:layout_marginTop="31dp"
-            android:text="@string/our_books_collection"
+            android:text=" Our Books Collection!"
             android:textColor="#B6AD7E"
             android:textSize="20dp" />
 
@@ -80,8 +80,6 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:layout_below="@+id/available" />
 
 

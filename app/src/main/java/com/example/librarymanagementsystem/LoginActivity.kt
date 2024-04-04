@@ -1,72 +1,77 @@
 package com.example.librarymanagementsystem
 
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
-//import kotlinx.android.synthetic.main.login_activity.*
+import android.widget.Toast
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
+
 
 class LoginActivity : AppCompatActivity() {
-
-    private val RC_SIGN_IN = 1001
-    lateinit var buttonLogin:Button
-    lateinit var buttonGoogleSignIn:Button
-    lateinit var textViewForgotPassword:TextView
-
+    private lateinit var auth: FirebaseAuth
+    private lateinit var btn_login:Button
+    private lateinit var signup:TextView
+    private lateinit var username:EditText
+    private lateinit var pwd:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
-        buttonLogin=findViewById(R.id.buttonLogin)
-        buttonGoogleSignIn=findViewById(R.id.buttonGoogleSignIn)
-        textViewForgotPassword=findViewById(R.id.textViewForgotPassword)
+        window.statusBarColor= Color.TRANSPARENT
+                auth = FirebaseAuth.getInstance()
+        // Check if user is already logged in
+        btn_login=findViewById(R.id.btn_login)
+        signup=findViewById(R.id.signup)
+        username=findViewById(R.id.username)
+        this.pwd =findViewById(R.id.pwd)
 
+                // Your login button click listener
+                btn_login.setOnClickListener {
+                    val email = username.text.toString()
+                    val password = pwd.text.toString()
 
-        buttonLogin.setOnClickListener {
-            // Handle login button click
-            // Here you can authenticate with your server using the provided credentials
-        }
+                    loginUser(email, password)
+                }
 
-        buttonGoogleSignIn.setOnClickListener {
-            // Configure Google Sign In
-            val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestEmail()
-                .build()
+                // Sign up text click listener
+                signup.setOnClickListener {
+                    startActivity(Intent(this, SignUpActivity::class.java))
+                }
+            }
 
-            val googleSignInClient = GoogleSignIn.getClient(this, gso)
-            val signInIntent = googleSignInClient.signInIntent
-            startActivityForResult(signInIntent, RC_SIGN_IN)
-        }
+            private fun loginUser(email: String, password: String) {
+                auth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful) {
+                            // Login success, navigate to HomepageActivity
+                            startActivity(Intent(this, HomePageActivity::class.java))
+                            finish()
+                        } else {
+                            // Login failed, show an error message or handle accordingly
+                            try {
+                                throw task.exception!!
+                            } catch (e: FirebaseAuthInvalidCredentialsException) {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Invalid email or password format.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            } catch (e: Exception) {
+                                Toast.makeText(
+                                    this@LoginActivity,
+                                    "Sign up failed. Please try again later.",
+                                    Toast.LENGTH_SHORT
+                                ).show()
+                            }
+                        }
+                    }
 
-        textViewForgotPassword.setOnClickListener {
-            // Handle forgot password click
-            // Here you can implement the logic to reset the password
-        }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            handleGoogleSignInResult(task)
-        }
     }
 
-    private fun handleGoogleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account = completedTask.getResult(ApiException::class.java)
-            // Signed in successfully, show authenticated UI.
-            // Here you can handle the user authentication with your backend server
-        } catch (e: ApiException) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            // Log.e(TAG, "signInResult:failed code=" + e.statusCode)
-        }
-    }
-}
+

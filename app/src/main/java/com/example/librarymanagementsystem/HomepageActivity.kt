@@ -13,7 +13,7 @@ import com.google.android.material.navigation.NavigationView
 class HomepageActivity : AppCompatActivity() {
 
         private var recyclerView: RecyclerView? = null
-        private lateinit var adapter: BookAdapter
+        private lateinit var adapter: BooksAdaptor
         private lateinit var drawerLayout: DrawerLayout
         private lateinit var navigationView: NavigationView
 
@@ -25,7 +25,7 @@ class HomepageActivity : AppCompatActivity() {
                 recyclerView = findViewById(R.id.recycler_view)
                 recyclerView?.layoutManager = LinearLayoutManager(this)
                 val data = generateData()
-                adapter = BookAdapter(data)
+                adapter = BooksAdaptor(data)
                 recyclerView?.adapter = adapter
 
                 // Initialize DrawerLayout and NavigationView
@@ -72,17 +72,24 @@ class HomepageActivity : AppCompatActivity() {
 
         private fun generateData(): MutableList<bookscardview> {
                 val data: MutableList<bookscardview> = ArrayList()
-                // Add book objects with image resource IDs and titles
-                data.add(bookscardview("My Name is Not Devdas", R.drawable.book1))
-                data.add(bookscardview("Solar Bones", R.drawable.book2))
-                data.add(bookscardview("Data Structure", R.drawable.book3))
-                data.add(bookscardview("Arduino Programming", R.drawable.book4))
-                data.add(bookscardview("Python", R.drawable.book5))
-                data.add(bookscardview("C++ ", R.drawable.book6))
+                // Add book objects with unique titles and image resource IDs
+                if (!data.contains(bookscardview("My name is not Devdas", R.drawable.book1))) {
+                        data.add(bookscardview("My name is not Devdas", R.drawable.book1))
+                }
+                if (!data.contains(bookscardview("Solar Bones", R.drawable.book2))) {
+                        data.add(bookscardview("Solar Bones", R.drawable.book2))
+                }
+                if (!data.contains(bookscardview("Atomic Habits", R.drawable.book3))) {
+                        data.add(bookscardview("Atomic Habits", R.drawable.book3))
+                }
+                if (!data.contains(bookscardview("Atomic Habits", R.drawable.book4))) {
+                        data.add(bookscardview("Atomic Habits", R.drawable.book4))
+                }
 
                 // Add more books as needed
                 return data
         }
+
 }
 
 
