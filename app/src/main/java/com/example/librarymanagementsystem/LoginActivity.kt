@@ -1,6 +1,5 @@
 package com.example.librarymanagementsystem
 
-import HomepageActivity
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -28,7 +27,7 @@ class LoginActivity : AppCompatActivity() {
         btn_login=findViewById(R.id.btn_login)
         signup=findViewById(R.id.signup)
         username=findViewById(R.id.username)
-        pwd =findViewById(R.id.pwd)
+        this.pwd =findViewById(R.id.pwd)
 
                 // Your login button click listener
                 btn_login.setOnClickListener {
@@ -49,7 +48,7 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Login success, navigate to HomepageActivity
-                            startActivity(Intent(this, HomepageActivity::class.java))
+                            startActivity(Intent(this, HomePageActivity::class.java))
                             finish()
                         } else {
                             // Login failed, show an error message or handle accordingly

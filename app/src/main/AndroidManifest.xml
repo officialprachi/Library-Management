@@ -16,7 +16,8 @@ xmlns:tools="http://schemas.android.com/tools"
 
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
 
 
         <activity
@@ -37,8 +38,7 @@ xmlns:tools="http://schemas.android.com/tools"
 
         </activity>
 
-        <activity
-            android:name=".HomepageActivity"
+        <activity android:name=".HomePageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.widget.Button
-import HomepageActivity
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -75,7 +74,7 @@ private lateinit var loginhere:TextView
                                 Toast.LENGTH_SHORT
                             ).show()
                             // You can proceed with additional actions here, like navigating to another activity
-                            val intent = Intent(this, HomepageActivity::class.java)
+                            val intent = Intent(this, HomePageActivity::class.java)
 
                             // Start the Homepage Activity
                             startActivity(intent)

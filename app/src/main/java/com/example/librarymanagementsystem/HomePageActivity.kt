@@ -1,16 +1,18 @@
+package com.example.librarymanagementsystem
+
+
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.librarymanagementsystem.BooksAdapter
-import com.example.librarymanagementsystem.R
 
-class HomepageActivity : AppCompatActivity() {
+class HomePageActivity : AppCompatActivity() {
         private lateinit var recyclerView: RecyclerView
         private lateinit var adapter: BooksAdapter
-
+        private lateinit var save_btn:ImageButton
+        private lateinit var savebtn1:ImageButton
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_homepage)
@@ -23,8 +25,8 @@ class HomepageActivity : AppCompatActivity() {
                 recyclerView.adapter = adapter
 
                 // Find the save button within the activity_homepage layout
-                val saveButton = findViewById<ImageButton>(R.id.save_Btn)
-                saveButton.setOnClickListener { onSaveButtonClick() }
+               // save_btn= findViewById(R.id.save_btn)
+                //save_btn?.setOnClickListener { onSaveButtonClick() }
         }
 
         private fun generateData(): List<String> {
