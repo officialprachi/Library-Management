@@ -7,7 +7,7 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class BooksAdapter(private val imageResourceIds: MutableList<bookscardview>) : RecyclerView.Adapter<BooksAdapter.MyViewHolder>() {
+class BooksAdaptor(private val imageResourceIds: MutableList<bookscardview>) : RecyclerView.Adapter<BooksAdaptor.MyViewHolder>() {
 
     inner class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val bookImage: ImageView = itemView.findViewById(R.id.book1)
@@ -27,6 +27,10 @@ class BooksAdapter(private val imageResourceIds: MutableList<bookscardview>) : R
     override fun getItemCount(): Int {
         return imageResourceIds.size
     }
+}
+
+private fun ImageView.setImageResource(imageResourceId: bookscardview) {
+
 }
 
 private fun ImageView.setImageResource(imageResourceId: String) {

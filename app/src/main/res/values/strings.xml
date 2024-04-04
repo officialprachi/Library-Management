@@ -10,5 +10,11 @@
     <string name="add_new_student" />
     <string name="add_new_books" />
     <string name="librarymanagement" />
+    <string name="sign_up">\n</string>
+    <string name="don_t_have_an_account" />
+    <string name="issue">Issue</string>
+    <string name="data_structure">\'Data Structure\'</string>
+    <string name="python">\'Python\'</string>
+    <string name="c_book">\'C++ Book\'</string>
 
 </resources>
