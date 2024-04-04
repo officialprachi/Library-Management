@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#121213">
+    android:background="@color/background_dark">
     <TextView
         android:id="@+id/title1"
         android:layout_width="match_parent"

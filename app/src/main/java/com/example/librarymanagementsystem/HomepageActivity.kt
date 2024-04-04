@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.ImageButton
@@ -15,6 +16,9 @@ class HomepageActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
                 super.onCreate(savedInstanceState)
                 setContentView(R.layout.activity_homepage)
+
+                window.statusBarColor= Color.TRANSPARENT
+
                 recyclerView = findViewById(R.id.recycler_view)
                 recyclerView?.layoutManager = LinearLayoutManager(this)
                 val data = generateData() // Your data source

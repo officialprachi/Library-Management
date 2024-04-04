@@ -9,7 +9,7 @@ xmlns:tools="http://schemas.android.com/tools"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/library_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/library_logo"
+        android:roundIcon="@drawable/_logo"
         android:supportsRtl="true"
         tools:targetApi="31"
         android:theme="@style/Theme.LibraryManagementSystem">
@@ -18,15 +18,29 @@ xmlns:tools="http://schemas.android.com/tools"
             android:name=".MainActivity"
             android:exported="false" />
 
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="false">
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
         </activity>
+
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" >
+
+        </activity>
+
         <activity
             android:name=".HomepageActivity"
             android:exported="false">
