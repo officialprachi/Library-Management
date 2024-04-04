@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#121213">
 
-    <!-- CardView for book1 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview1"
         android:layout_width="163dp"
@@ -16,69 +14,82 @@
         android:layout_marginTop="33dp"
         app:cardCornerRadius="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
 
         <ImageView
             android:id="@+id/book1"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:scaleType="centerCrop"
             android:src="@drawable/book1" />
+
     </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/book_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
+        android:layout_marginStart="35dp"
         android:fontFamily="cursive"
         android:text="'My name is not devdas'"
         android:textColor="@color/librarymanagement"
         android:textSize="19dp"
-        android:layout_below="@+id/cardview1"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview1" />
 
     <ImageButton
-        android:id="@+id/save_Btn1"
+        android:id="@+id/save_Btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview1"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview1" />
 
     <Button
-        android:id="@+id/issue_btn1"
+        android:id="@+id/issue_btn"
         android:layout_width="83dp"
         android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:layout_toRightOf="@+id/save_Btn1"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="231dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
         android:textSize="13dp"
-        android:layout_below="@+id/book_title1"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- CardView for book2 -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview2"
         android:layout_width="163dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="33dp"
         app:cardCornerRadius="20dp"
-        android:layout_toRightOf="@+id/cardview1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/book2"
             android:layout_width="match_parent"
             android:layout_height="171dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:scaleType="centerCrop"
             android:src="@drawable/book2" />
+
     </androidx.cardview.widget.CardView>
 
-    <!-- TextView for book2 title -->
     <TextView
         android:id="@+id/book_title2"
         android:layout_width="wrap_content"
@@ -88,41 +99,45 @@
         android:text="'Solar Bones'"
         android:textColor="@color/librarymanagement"
         android:textSize="22dp"
-       android:layout_below="@+id/cardview2"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview1" />
+
     <ImageButton
         android:id="@+id/savebtn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview2"
-        android:layout_marginStart="40dp"
-        android:layout_marginLeft="47dp"
-        android:layout_marginTop="24dp"
-        android:layout_toRightOf="@+id/issue_btn1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="232dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/issuebtn2"
+        android:id="@+id/issuebtn3"
         android:layout_width="83dp"
         android:layout_height="42dp"
-        android:layout_below="@+id/book_title2"
-        android:layout_marginLeft="53dp"
-        android:layout_marginTop="-5dp"
-        android:layout_toRightOf="@+id/savebtn2"
+        android:layout_marginStart="280dp"
+        android:layout_marginTop="229dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
-        android:textSize="13dp" />
+        android:textSize="13dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview3"
         android:layout_width="142dp"
         android:layout_height="169dp"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="316dp"
         app:cardCornerRadius="20dp"
-       android:layout_below="@+id/cardview1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/book3"
@@ -134,215 +149,43 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- TextView for book3 title -->
     <TextView
         android:id="@+id/book_title3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:fontFamily="cursive"
-        android:text="'Data Structures'"
+        android:text="'Atomic Habits'"
         android:textColor="@color/librarymanagement"
+        android:fontFamily="cursive"
         android:textSize="20dp"
-        android:layout_below="@+id/cardview3" />
-
-
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardview3" />
     <ImageButton
-        android:id="@+id/savebtn3"
+        android:id="@+id/savebtn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview3"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="512dp"
         android:background="?attr/selectableItemBackground"
         android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
+        android:src="@drawable/savebtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/issuebtn3"
+        android:id="@+id/issuebtn2"
         android:layout_width="83dp"
         android:layout_height="42dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="512dp"
         android:backgroundTint="@color/librarymanagement"
         android:text="Issue"
         android:textColor="@color/black"
         android:textSize="13dp"
-     android:layout_below="@+id/cardview3"
-        android:layout_toRightOf="@+id/savebtn3"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview4"
-        android:layout_width="142dp"
-        android:layout_height="169dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="65dp"
-        app:cardCornerRadius="20dp"
-        android:layout_toEndOf="@+id/cardview3"
-        android:layout_below="@+id/cardview2">
-
-        <ImageView
-            android:id="@+id/book4"
-            android:layout_width="138dp"
-            android:layout_height="171dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/book4" />
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/book_title4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview4"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="-3dp"
-        android:layout_toEndOf="@+id/book_title3"
-        android:fontFamily="cursive"
-        android:text="@string/arduinoprogramming"
-        android:textColor="@color/librarymanagement"
-        android:textSize="19dp" />
-
-    <ImageButton
-        android:id="@+id/savebtn4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview4"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="28dp"
-        android:layout_toEndOf="@+id/issuebtn3"
-        android:background="?attr/selectableItemBackground"
-        android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
-
-    <Button
-        android:id="@+id/issuebtn4"
-        android:layout_width="83dp"
-        android:layout_height="42dp"
-        android:layout_below="@+id/cardview4"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="272dp"
-        android:layout_marginTop="25dp"
-        android:backgroundTint="@color/librarymanagement"
-        android:text="@string/issue"
-        android:textColor="@color/black"
-        android:textSize="13dp" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview5"
-        android:layout_width="142dp"
-        android:layout_height="169dp"
-        android:layout_marginTop="75dp"
-        app:cardCornerRadius="20dp"
-        android:layout_below="@+id/cardview4"
-        android:layout_marginStart="30dp">
-
-        <ImageView
-            android:id="@+id/book5"
-            android:layout_width="138dp"
-            android:layout_height="171dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/book5" />
-
-    </androidx.cardview.widget.CardView>
-
-    <!-- TextView for book5 title -->
-
-    <!-- ImageButton for saving book5 -->
-
-    <TextView
-        android:id="@+id/book_title5"
-        android:layout_width="wrap_content"
-        android:layout_height="47dp"
-        android:layout_below="@+id/cardview4"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="250dp"
-        android:fontFamily="cursive"
-        android:text="@string/pythonprogramming"
-        android:textColor="@color/librarymanagement"
-        android:textSize="20dp" />
-
-    <ImageButton
-        android:id="@+id/savebtn5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview5"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        android:background="?attr/selectableItemBackground"
-        android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
-
-    <Button
-        android:id="@+id/issuebtn5"
-        android:layout_width="83dp"
-        android:layout_height="42dp"
-        android:layout_below="@+id/cardview5"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="42dp"
-        android:layout_toEndOf="@+id/savebtn5"
-        android:backgroundTint="@color/librarymanagement"
-        android:text="@string/issue"
-        android:textColor="@color/black"
-        android:textSize="13dp" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardview6"
-        android:layout_width="142dp"
-        android:layout_height="169dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="75dp"
-        app:cardCornerRadius="20dp"
-       android:layout_below="@+id/cardview4"
-        android:layout_toEndOf="@+id/cardview5">
-
-        <ImageView
-            android:id="@+id/book6"
-            android:layout_width="150dp"
-            android:layout_height="166dp"
-            android:layout_alignParentStart="true"
-            android:src="@drawable/book6" />
-
-    </androidx.cardview.widget.CardView>
-
-
-    <TextView
-        android:id="@+id/book_title6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/cardview6"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="6dp"
-        android:layout_toEndOf="@+id/issuebtn5"
-        android:fontFamily="cursive"
-        android:text="@string/c_programming"
-        android:textColor="@color/librarymanagement"
-        android:textSize="20dp" />
-
-    <ImageButton
-        android:id="@+id/savebtn6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/book_title6"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="9dp"
-        android:layout_toEndOf="@+id/issuebtn5"
-        android:background="?attr/selectableItemBackground"
-        android:contentDescription="@string/save_button_description"
-        android:src="@drawable/savebtn" />
-
-    <Button
-        android:id="@+id/issuebtn6"
-        android:layout_width="83dp"
-        android:layout_height="42dp"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="@color/librarymanagement"
-        android:text="@string/issue"
-        android:textColor="@color/black"
-        android:textSize="13dp"
-       android:layout_below="@+id/book_title6"
-        android:layout_toEndOf="@+id/savebtn6"/>
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -32,11 +32,11 @@ class BookAdapter(private val booksData: List<bookscardview>) : RecyclerView.Ada
             holder.bookImage.setImageResource(book.imageResourceId)
         } else {
             // Set a placeholder image (optional):
+
         }
     }
 
     override fun getItemCount(): Int {
-        // Return the minimum of the size of your data source and 6
-        return maxOf(booksData.size, 6)
+        return booksData.size
     }
 }
