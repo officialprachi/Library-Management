@@ -73,9 +73,12 @@ class HomepageActivity : AppCompatActivity() {
         private fun generateData(): MutableList<bookscardview> {
                 val data: MutableList<bookscardview> = ArrayList()
                 // Add book objects with image resource IDs and titles
-                data.add(bookscardview("Book 1 Title", R.drawable.book1))
-                data.add(bookscardview("Book 2 Title", R.drawable.book2))
-
+                data.add(bookscardview("My Name is Not Devdas", R.drawable.book1))
+                data.add(bookscardview("Solar Bones", R.drawable.book2))
+                data.add(bookscardview("Data Structure", R.drawable.book3))
+                data.add(bookscardview("Arduino Programming", R.drawable.book4))
+                data.add(bookscardview("Python", R.drawable.book5))
+                data.add(bookscardview("C++ ", R.drawable.book6))
 
                 // Add more books as needed
                 return data

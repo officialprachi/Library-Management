@@ -37,6 +37,6 @@ class BookAdapter(private val booksData: List<bookscardview>) : RecyclerView.Ada
 
     override fun getItemCount(): Int {
         // Return the minimum of the size of your data source and 6
-        return minOf(booksData.size, 6)
+        return maxOf(booksData.size, 6)
     }
 }

@@ -7,5 +7,14 @@
     <string name="navigation_drawer_close">Close drawer</string>
     <string name="search_your_books">Search your books</string>
     <string name="our_books_collection">Our Books Collection!</string>
+    <string name="logout">LogOut</string>
+    <string name="student_details">Student Details</string>
+    <string name="add_new_student">Add New Student</string>
+    <string name="add_new_books">Add New Books</string>
+    <string name="librarymanagement">LibraryManagement</string>
+    <string name="arduinoprogramming">\'ArduinoProgramming\'</string>
+    <string name="issue">Issue</string>
+    <string name="pythonprogramming">\'PythonProgramming\'</string>
+    <string name="c_programming">\'C++Programming\'</string>
 
 </resources>
