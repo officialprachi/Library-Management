@@ -14,5 +14,7 @@
     <string name="don_t_have_an_account" />
     <string name="issue">Issue</string>
     <string name="data_structure">\'Data Structure\'</string>
+    <string name="python">\'Python\'</string>
+    <string name="c_book">\'C++ Book\'</string>
 
 </resources>
