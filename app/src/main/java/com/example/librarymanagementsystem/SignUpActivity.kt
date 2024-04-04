@@ -13,6 +13,7 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthUserCollisionException
 
 
+
 class SignUpActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var btn_signup:Button
@@ -74,7 +75,7 @@ private lateinit var loginhere:TextView
                                 Toast.LENGTH_SHORT
                             ).show()
                             // You can proceed with additional actions here, like navigating to another activity
-                            val intent = Intent(this, HomePageActivity::class.java)
+                            val intent = Intent(this, Homepage::class.java)
 
                             // Start the Homepage Activity
                             startActivity(intent)

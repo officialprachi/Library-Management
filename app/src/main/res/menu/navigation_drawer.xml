@@ -4,27 +4,27 @@
 
 <item
     android:id="@+id/main_item"
-    android:title="LibraryManagement">
+    android:title="@string/librarymanagement">
 <menu>
     <item
         android:id="@+id/inbox_item"
-        android:title="Add  New Books"
+        android:title="@string/add_new_books"
         android:checkable="true"/>
 
     <item
         android:id="@+id/outbox_item"
-        android:title=" Add New Student "
+        android:title="@string/add_new_student"
         android:checkable="true"/>
     <item
         android:id="@+id/favourites_item"
-        android:title="Student Details"
+        android:title="@string/student_details"
         android:checkable="true"/>
 
 </menu>
 </item>
             <item
                 android:id="@+id/search_item"
-                android:title="LogOut"
+                android:title="@string/logout"
                 android:checkable="true"
                 app:showAsAction="ifRoom"/>
 
