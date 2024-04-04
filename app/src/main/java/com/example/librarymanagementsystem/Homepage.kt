@@ -13,7 +13,7 @@ import com.google.android.material.navigation.NavigationView
 class Homepage : AppCompatActivity() {
 
     private var recyclerView: RecyclerView? = null
-    private lateinit var adapter: BooksAdaptor
+    private lateinit var adapter: BookAdapter
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var navigationView: NavigationView
 
@@ -25,7 +25,7 @@ class Homepage : AppCompatActivity() {
         recyclerView = findViewById(R.id.recycler_view)
         recyclerView?.layoutManager = LinearLayoutManager(this)
         val data = generateData()
-        adapter = BooksAdaptor(data)
+        adapter = BookAdapter(data)
         recyclerView?.adapter = adapter
 
         // Initialize DrawerLayout and NavigationView
@@ -82,17 +82,9 @@ class Homepage : AppCompatActivity() {
         if (!data.contains(bookscardview("Atomic Habits", R.drawable.book3))) {
             data.add(bookscardview("Atomic Habits", R.drawable.book3))
         }
-        if (!data.contains(bookscardview("Atomic Habits", R.drawable.book4))) {
-            data.add(bookscardview("Atomic Habits", R.drawable.book4))
-        }
 
         // Add more books as needed
         return data
     }
 
 }
-
-
-
-
-

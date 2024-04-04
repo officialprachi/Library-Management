@@ -10,5 +10,7 @@
     <string name="add_new_student" />
     <string name="add_new_books" />
     <string name="librarymanagement" />
+    <string name="sign_up">\n</string>
+    <string name="don_t_have_an_account" />
 
 </resources>
