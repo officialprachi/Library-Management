@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "877773258823",
+    "project_id": "library-management-syste-6fed6",
+    "storage_bucket": "library-management-syste-6fed6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877773258823:android:2934f8bf6038d4ef24b162",
+        "android_client_info": {
+          "package_name": "com.example.librarymanagementsystem"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBZPiCxQ27mYQMSv6sFXUYyi_Z8kU3VLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
