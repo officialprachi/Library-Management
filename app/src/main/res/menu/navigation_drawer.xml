@@ -14,11 +14,11 @@
 
             <item
                 android:id="@+id/outbox_item"
-                android:title=" Add New Student "
+                android:title=" Saved books "
                 android:checkable="true"/>
             <item
                 android:id="@+id/favourites_item"
-                android:title="Student Details"
+                android:title="Issued Books"
                 android:checkable="true"/>
 
         </menu>

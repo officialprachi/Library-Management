@@ -1,5 +1,6 @@
 package com.example.librarymanagementsystem
 
+import Homepage
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -27,7 +28,8 @@ class LoginActivity : AppCompatActivity() {
         btn_login=findViewById(R.id.btn_login)
         signup=findViewById(R.id.signup)
         username=findViewById(R.id.username)
-        pwd =findViewById(R.id.pwd)
+        pwd=findViewById(R.id.pwd)
+
 
                 // Your login button click listener
                 btn_login.setOnClickListener {
