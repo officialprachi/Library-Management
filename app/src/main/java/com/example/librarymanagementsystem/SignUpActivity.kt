@@ -1,6 +1,5 @@
 package com.example.librarymanagementsystem
 
-import Homepage
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
@@ -76,7 +75,7 @@ private lateinit var loginhere:TextView
                                 Toast.LENGTH_SHORT
                             ).show()
                             // You can proceed with additional actions here, like navigating to another activity
-                            val intent = Intent(this, Homepage::class.java)
+                            val intent = Intent(this, MainActivity::class.java)
 
                             // Start the Homepage Activity
                             startActivity(intent)

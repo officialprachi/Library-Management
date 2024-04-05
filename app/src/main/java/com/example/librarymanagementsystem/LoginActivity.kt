@@ -1,6 +1,5 @@
 package com.example.librarymanagementsystem
 
-import Homepage
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -50,7 +49,7 @@ class LoginActivity : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Login success, navigate to HomepageActivity
-                            startActivity(Intent(this, Homepage::class.java))
+                            startActivity(Intent(this, MainActivity::class.java))
                             finish()
                         } else {
                             // Login failed, show an error message or handle accordingly
