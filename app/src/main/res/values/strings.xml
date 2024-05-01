@@ -20,5 +20,6 @@
     <string name="atomic_habits">\'Atomic Habits\'</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="searchbar_hint">Search here..\n</string>
 
 </resources>

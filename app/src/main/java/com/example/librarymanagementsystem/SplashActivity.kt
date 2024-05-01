@@ -17,7 +17,6 @@ class SplashActivity : AppCompatActivity() {
         window.statusBarColor= Color.TRANSPARENT
 
 
-
         Handler(Looper.getMainLooper()).postDelayed({
             //Start your main activity after the delay
             startActivity(Intent(this, LoginActivity::class.java))

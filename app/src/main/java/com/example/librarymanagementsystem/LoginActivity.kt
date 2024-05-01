@@ -29,7 +29,6 @@ class LoginActivity : AppCompatActivity() {
         username=findViewById(R.id.username)
         pwd=findViewById(R.id.pwd)
 
-
                 // Your login button click listener
                 btn_login.setOnClickListener {
                     val email = username.text.toString()

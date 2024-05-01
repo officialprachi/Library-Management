@@ -4,7 +4,6 @@ data class bookscardview(
 
     val title: String,
     val imageResourceId: Int,
-    val available: Boolean
 
-)
+    )
 

@@ -3,6 +3,7 @@
 xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".MyApp1"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,6 +18,7 @@ xmlns:tools="http://schemas.android.com/tools">
         <activity
             android:name=".MainActivity"
             android:exported="false" >
+
         </activity>
 
 
@@ -38,6 +40,12 @@ xmlns:tools="http://schemas.android.com/tools">
 
         <activity
             android:name=".SignUpActivity"
+            android:exported="false" >
+
+        </activity>
+
+        <activity
+            android:name=".AddBookFragment"
             android:exported="false" >
 
         </activity>

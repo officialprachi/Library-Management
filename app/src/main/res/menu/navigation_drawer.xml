@@ -8,23 +8,23 @@
         android:title="LibraryManagement">
         <menu>
             <item
-                android:id="@+id/inbox_item"
+                android:id="@+id/add_newbook"
                 android:title="Add  New Books"
                 android:checkable="true"/>
 
             <item
-                android:id="@+id/outbox_item"
+                android:id="@+id/saved_book"
                 android:title=" Saved books "
                 android:checkable="true"/>
             <item
-                android:id="@+id/favourites_item"
+                android:id="@+id/issuebook"
                 android:title="Issued Books"
                 android:checkable="true"/>
 
         </menu>
     </item>
     <item
-        android:id="@+id/search_item"
+        android:id="@+id/log_out"
         android:title="LogOut"
         android:checkable="true"
         app:showAsAction="ifRoom"/>
